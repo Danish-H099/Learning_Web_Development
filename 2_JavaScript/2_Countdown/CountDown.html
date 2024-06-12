@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cla {
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cla">Start</div>
+</body>
+<script>
+    // var dash = () => {
+    //     var time = new Date().toLocaleTimeString();
+    //     document.getElementById("cla").innerHTML = time;
+    // }
+    // setInterval(dash, 1000);
+    var sec = '1'
+    var min = '10'
+    var hr = '0'
+
+    var dash = () => {
+        sec--;
+        if (sec < 0) {
+            sec = 59;
+            min--;
+            if (min < 0) {
+                min = 59;
+                hr--;
+            }
+        }
+        var a = String(sec)
+        if (a.length == 1) {
+            a = '0' + a;
+        }
+        var b = String(min)
+        if (b.length == 1) {
+            b = '0' + b;
+        }
+        var c = String(hr)
+        if (c.length == 1) {
+            c = '0' + c;
+        }
+        var countDown = c + ":" + b + ":" + a;
+        document.getElementById("cla").innerHTML = countDown;
+    }
+    var Hash = setInterval(dash, 1000);
+
+    setTimeout(() => {
+        clearInterval(Hash);
+        document.getElementById("cla").innerHTML = "Time is UP";
+    }, 601000);
+</script>
+
+</html>

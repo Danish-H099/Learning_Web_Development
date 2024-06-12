@@ -1,0 +1,42 @@
+.linediv{
+    box-sizing: border-box;
+    width: 98vw;
+    height: 8vh;
+    position: relative;
+    overflow: hidden;
+    border:2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    
+     width:98vw;
+     font-size: 17px;
+     margin-top: 12px;
+     overflow: hidden;
+    position:absolute;
+    top:2px;
+    left:2px;
+    animation:dash 12s linear infinite;
+}
+@keyframes dash {
+    0%{
+        left: 100%;
+    }
+    25%{
+        left: 50%;
+        color: red;
+    }
+    50%{
+        left: 0%;
+    }
+    75%{
+        left: -50%;
+        color: red;
+    }
+    100%{
+        left: -100%;
+    }
+    
+}

@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    
+}
+.logo{
+    box-sizing: border-box;
+    width: 150px;
+    height: 250px;
+    
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-right: 50px solid rgb(165, 35, 35);
+    border-left: 50px solid rgb(165, 35, 35);
+}
+.logo::before{
+    content:'';
+    display:block;
+    position: absolute;
+    width:50px;
+    height:250px;
+    top:0;
+    left:0;
+    background: red;
+    transform:skewX(21.8deg);
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    
+}

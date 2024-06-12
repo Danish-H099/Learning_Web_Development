@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+}
+.progress{
+    width:450px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.progress::after{
+    content: '';
+    background: linear-gradient(135deg,#fd0000,#1d00f0);
+    width:0;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    animation:pro 2s linear forwards;
+}
+
+@keyframes pro {
+    100%{
+        width:90%;
+    }
+    
+}

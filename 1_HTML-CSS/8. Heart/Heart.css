@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+
+.heart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.heart span{
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.heart span:nth-child(1){
+    transform: rotate(-45deg) translate(20px);
+}
+
+.heart span:nth-child(2){
+    transform: rotate(45deg) translate(-20px);
+}
+

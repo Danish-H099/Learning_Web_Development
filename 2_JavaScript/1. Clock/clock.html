@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="out">
+        <h1 id="dash"></h1>
+        <div class="img-cont">
+            <img src="clock.png" alt="">
+        </div>
+        <div class="tick">
+            <img src="tick.png" alt="">
+        </div>
+    </div>
+    
+
+</body>
+    <script>
+        function clock(){
+            const time= new Date();
+            var options={
+                second:"numeric",
+                minute:"numeric",
+                hour:"numeric",
+                weekday:"long",
+                day:"numeric",
+                month:"long",
+                year:"numeric"
+            };
+
+            var day=time.toLocaleDateString('en-UR',options);
+            console.log(time)
+            document.querySelector("#dash").innerHTML=day;
+        }
+        setInterval(clock,1000);
+
+        // setTimeout(() => {
+        //     alert("hey");
+        // }, 4000);
+
+    </script>
+
+</html>

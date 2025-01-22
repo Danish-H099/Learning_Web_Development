@@ -1,0 +1,17 @@
+div{
+    width:100%;
+    height:100%;
+    display: grid;
+    place-items: center;
+}
+p{
+    width: 50%;
+    margin: 30px auto 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
